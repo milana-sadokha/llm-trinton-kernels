@@ -13,7 +13,7 @@ Fused SiLU and LayerNorm kernels implemented in OpenAI Triton, benchmarked again
 | 4096           | 175.37               | 223.41               | **226.35**           | ~1.29x          |
 | 8192           | 163.22               | 172.01               | **229.34**           | ~1.40x          |
 
-*(Replace this line with your graph: `![LayerNorm Benchmark](layernorm_benchmark.png)`)*
+![LayerNorm Benchmark](layernorm_benchmark.png)
 
 **Conclusion:** The custom Triton kernel achieves performance parity with highly optimized eager PyTorch for smaller dimensions ($N \le 2048$). However, for larger dimensions typical of modern LLMs ($N \ge 3072$), Triton outperforms eager PyTorch by 1.2x - 1.4x, remaining within ~5% of the performance of a static `torch.compile` graph.
 
