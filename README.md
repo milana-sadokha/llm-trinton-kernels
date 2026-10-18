@@ -13,7 +13,7 @@ Fused SiLU and LayerNorm kernels in Triton, benchmarked against eager PyTorch an
 | 4096           | 175.5        | 241.7                | 229.6         | 1.31×           | 0.95×             |
 | 8192           | 163.1        | 239.1                | 231.8         | 1.42×           | 0.97×             |
 
-*(Replace this line with your graph: `![LayerNorm Benchmark](layernorm_benchmark.png)`)*
+![LayerNorm Benchmark](layernorm_benchmark.png)
 
 **Conclusion:** For $N \le 2048$ the Triton kernel is on par with eager `F.layer_norm`. For $N \ge 3072$ eager PyTorch degrades (down to 163 GB/s at $N=8192$) while the Triton kernel stays flat at ~224-232 GB/s, i.e. 1.2-1.4× higher effective bandwidth. `torch.compile` (TorchInductor) is the strongest baseline: for $N \ge 2048$ it is 3-5% faster than the hand-written kernel (≈240 GB/s).
 
