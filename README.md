@@ -45,7 +45,7 @@ Before benchmarking, the kernels were rigorously tested using `torch.testing.ass
 * **Triton Version:** 3.6.0
 * **Hardware:** NVIDIA T4
 
-[![Open In Colab](https://colab.research.google.com/drive/1hZAZPro4F5uJSDBV5coGaCK4T5HG_9Yd?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hZAZPro4F5uJSDBV5coGaCK4T5HG_9Yd?usp=sharing)
 
 ## 7. Next Steps
 * Implement `@triton.autotune` to dynamically select the optimal `num_warps` and `BLOCK_SIZE`.
