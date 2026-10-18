@@ -54,4 +54,4 @@ Before benchmarking, the kernels were tested using `torch.testing.assert_close`:
 * **Triton Version:** 3.6.0
 * **Hardware:** NVIDIA T4
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/milana-sadokha/llm-triton-kernels/blob/main/triton_llm_kernels.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hZAZPro4F5uJSDBV5coGaCK4T5HG_9Yd?usp=sharing)
